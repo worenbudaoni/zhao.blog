@@ -6,7 +6,8 @@
 >
 > 这里就出现了一个问题，B微服务 程序一直报错，卡在了 redis 获取数据的代码上，之后我在A、B两个微服务上各写入 redis 的 set 操作，发现两个序列化后的数据，竟然不一样，按道理说通过 RPC 调用后的 A微服务 中返回的数据应该和 B微服务 接收的参数是一样的，我进一步打印了 A、B微服务中 的返回值与接收值，发现竟然真的不一样，他把对象直接转成了Map集合
 
-![image-20220929101106465](C:\Users\18358\AppData\Roaming\Typora\typora-user-images\image-20220929101106465.png)
+![image](https://user-images.githubusercontent.com/97650200/194518505-05952f05-e0f1-4872-a902-3e9ddee3185c.png)
+
 
 # 原因
 
